@@ -1,0 +1,175 @@
+@prefix nus: <http://www.nuscenes.org/nuScenes/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+nus:hasCoarseCategory a owl:ObjectProperty ;
+    rdfs:comment "Coarse type bucket for the underlying participant (Vehicle, Pedestrian, MovableObject, Infrastructure). Stable across all scene appearances." ;
+    rdfs:domain nus:Participant ;
+    rdfs:range nus:AgentCoarseType .
+
+nus:hasDescription a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+nus:hasEgoVehicle a owl:ObjectProperty ;
+    rdfs:domain nus:Trip ;
+    rdfs:range nus:EgoVehicle .
+
+nus:hasFrameIndex a owl:DatatypeProperty ;
+    rdfs:domain nus:Scene ;
+    rdfs:range xsd:integer .
+
+nus:hasName a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+nus:hasNextScene a owl:ObjectProperty ;
+    rdfs:domain nus:Scene ;
+    rdfs:range nus:Scene .
+
+nus:hasNuScenesCategory a owl:DatatypeProperty ;
+    rdfs:comment "Raw nuScenes detection category string (e.g. vehicle.car)." ;
+    rdfs:domain nus:SceneParticipant ;
+    rdfs:range xsd:string .
+
+nus:hasPosition a owl:ObjectProperty ;
+    rdfs:domain nus:SceneParticipant ;
+    rdfs:range nus:Point2D .
+
+nus:hasPreviousScene a owl:ObjectProperty ;
+    rdfs:domain nus:Scene ;
+    rdfs:range nus:Scene .
+
+nus:hasScene a owl:ObjectProperty ;
+    rdfs:domain nus:Sequence ;
+    rdfs:range nus:Scene .
+
+nus:hasSceneParticipant a owl:ObjectProperty ;
+    rdfs:domain nus:Scene ;
+    rdfs:range nus:SceneParticipant .
+
+nus:hasSequence a owl:ObjectProperty ;
+    rdfs:domain nus:Trip ;
+    rdfs:range nus:Sequence .
+
+nus:hasTimestamp a owl:DatatypeProperty ;
+    rdfs:domain nus:Scene ;
+    rdfs:range xsd:string .
+
+nus:hasTrackId a owl:DatatypeProperty ;
+    rdfs:domain nus:Participant ;
+    rdfs:range xsd:integer .
+
+nus:hasTrip a owl:ObjectProperty ;
+    rdfs:domain nus:Dataset ;
+    rdfs:range nus:Trip .
+
+nus:hasVersion a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+nus:hasX a owl:DatatypeProperty ;
+    rdfs:domain nus:Point2D ;
+    rdfs:range xsd:float .
+
+nus:hasY a owl:DatatypeProperty ;
+    rdfs:domain nus:Point2D ;
+    rdfs:range xsd:float .
+
+nus:isSceneParticipantOf a owl:ObjectProperty ;
+    rdfs:domain nus:SceneParticipant ;
+    rdfs:range nus:Participant .
+
+nus:motionTowardEgo a owl:ObjectProperty ;
+    rdfs:comment "Ego-relative motion label computed from planar distance delta between consecutive keyframes (DISTANCE_THRESHOLD = 0.5 m)." ;
+    rdfs:domain nus:SceneParticipant ;
+    rdfs:range nus:MotionState .
+
+nus:ontology a owl:Ontology ;
+    rdfs:label "EXP-006 Intention-Relation Ontology" ;
+    rdfs:comment "T-Box for the EXP-006 knowledge graph: extends the implicit schema of EXP-005 with ego-centric spatial configuration and TTC risk." .
+
+nus:sequenceCount a owl:DatatypeProperty ;
+    rdfs:range xsd:integer .
+
+nus:spatialConfiguration a owl:ObjectProperty ;
+    rdfs:comment "Ego-centric 8-zone surround label. Computed in the ego body frame (x forward, y left). Longitudinal band |x_body| <= 3.0 m = alongside; lateral band |y_body| < 1.75 m = same lane; max range 50 m." ;
+    rdfs:domain nus:SceneParticipant ;
+    rdfs:range nus:SpatialZone .
+
+nus:ttcRisk a owl:ObjectProperty ;
+    rdfs:comment "Ego-centric line-of-sight TTC risk. TTC = d_curr / ((d_prev - d_curr) / 0.5 s). Bins (same discrete buckets as Manzour et al., arXiv:2312.06336): High < 4 s; Medium 4 s ≤ TTC < 10 s; Low ≥ 10 s. Not emitted when closing speed < 0.1 m/s or on first appearance." ;
+    rdfs:domain nus:SceneParticipant ;
+    rdfs:range nus:TTCRiskLevel .
+
+nus:Approaching a nus:MotionState .
+
+nus:Dataset a owl:Class .
+
+nus:EgoVehicle a owl:Class .
+
+nus:Following a nus:SpatialZone .
+
+nus:High a nus:TTCRiskLevel .
+
+nus:Infrastructure a nus:AgentCoarseType .
+
+nus:LeftAlongside a nus:SpatialZone .
+
+nus:LeftFollowing a nus:SpatialZone .
+
+nus:LeftPreceding a nus:SpatialZone .
+
+nus:Low a nus:TTCRiskLevel .
+
+nus:Medium a nus:TTCRiskLevel .
+
+nus:MovableObject a nus:AgentCoarseType .
+
+nus:Pedestrian a nus:AgentCoarseType .
+
+nus:Preceding a nus:SpatialZone .
+
+nus:Receding a nus:MotionState .
+
+nus:RightAlongside a nus:SpatialZone .
+
+nus:RightFollowing a nus:SpatialZone .
+
+nus:RightPreceding a nus:SpatialZone .
+
+nus:Stationary a nus:MotionState .
+
+nus:Vehicle a nus:AgentCoarseType .
+
+nus:Sequence a owl:Class .
+
+nus:Participant a owl:Class .
+
+nus:Point2D a owl:Class .
+
+nus:Trip a owl:Class .
+
+nus:MotionState a owl:Class ;
+    rdfs:comment "Enumerated ego-relative motion states." ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:oneOf ( nus:Approaching nus:Receding nus:Stationary ) ] .
+
+nus:TTCRiskLevel a owl:Class ;
+    rdfs:comment "Enumerated TTC risk bins." ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:oneOf ( nus:High nus:Medium nus:Low ) ] .
+
+nus:AgentCoarseType a owl:Class ;
+    rdfs:comment "Coarse agent bucket derived from nuScenes category via ontology_type_for_category (EXP-006 domain/category_map)." ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:oneOf ( nus:Vehicle nus:Pedestrian nus:MovableObject nus:Infrastructure ) ] .
+
+nus:SceneParticipant a owl:Class .
+
+nus:Scene a owl:Class .
+
+nus:SpatialZone a owl:Class ;
+    rdfs:comment "Enumerated 8-zone ego-centric surround (3x3 grid minus the ego cell)." ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:oneOf ( nus:Preceding nus:Following nus:LeftPreceding nus:LeftAlongside nus:LeftFollowing nus:RightPreceding nus:RightAlongside nus:RightFollowing ) ] .
+

@@ -1,0 +1,88 @@
+@prefix nus:  <http://www.nuscenes.org/nuScenes/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# ── Ontology header ─────────────────────────────────────────────────────────
+
+<http://www.nuscenes.org/nuScenes/ontology_diagram> a owl:Ontology ;
+    rdfs:label "NIKG Ontology – diagram view" .
+
+# ── Structural class hierarchy ───────────────────────────────────────────────
+#
+#   Relationships are expressed as direct predicates on the subject class.
+#   Every triple "ClassA  prop  ClassB" becomes an edge in the diagram.
+
+nus:Dataset a owl:Class ;
+    rdfs:label "Dataset" ;
+    nus:hasTrip nus:Trip .
+
+nus:Trip a owl:Class ;
+    rdfs:label "Trip" ;
+    nus:hasSequence   nus:Sequence ;
+    nus:hasEgoVehicle nus:EgoVehicle .
+
+nus:EgoVehicle a owl:Class ;
+    rdfs:label "EgoVehicle" .
+
+nus:Sequence a owl:Class ;
+    rdfs:label "Sequence" ;
+    nus:hasScene nus:Scene .
+
+nus:Scene a owl:Class ;
+    rdfs:label "Scene" ;
+    nus:hasSceneParticipant nus:SceneParticipant ;
+    nus:hasNextScene        nus:Scene ;
+    nus:hasPreviousScene    nus:Scene .
+
+nus:SceneParticipant a owl:Class ;
+    rdfs:label "SceneParticipant" ;
+    nus:isSceneParticipantOf  nus:Participant ;
+    nus:hasPosition           nus:Point2D ;
+    nus:motionTowardEgo       nus:MotionState ;
+    nus:spatialConfiguration  nus:SpatialZone ;
+    nus:ttcRisk               nus:TTCRiskLevel .
+
+nus:Participant a owl:Class ;
+    rdfs:label "Participant" ;
+    nus:hasCoarseCategory     nus:AgentCoarseType .
+
+nus:Point2D a owl:Class ;
+    rdfs:label "Point2D" .
+
+# ── Enumeration classes ──────────────────────────────────────────────────────
+
+nus:AgentCoarseType a owl:Class ;
+    rdfs:label "AgentCoarseType" .
+
+nus:MotionState a owl:Class ;
+    rdfs:label "MotionState" .
+
+nus:SpatialZone a owl:Class ;
+    rdfs:label "SpatialZone" .
+
+nus:TTCRiskLevel a owl:Class ;
+    rdfs:label "TTCRiskLevel" .
+
+# ── Enumerated individuals ────────────────────────────────────────────────────
+
+nus:Vehicle        a nus:AgentCoarseType ; rdfs:label "Vehicle" .
+nus:Pedestrian     a nus:AgentCoarseType ; rdfs:label "Pedestrian" .
+nus:MovableObject  a nus:AgentCoarseType ; rdfs:label "MovableObject" .
+nus:Infrastructure a nus:AgentCoarseType ; rdfs:label "Infrastructure" .
+
+nus:Approaching a nus:MotionState ; rdfs:label "Approaching" .
+nus:Receding    a nus:MotionState ; rdfs:label "Receding" .
+nus:Stationary  a nus:MotionState ; rdfs:label "Stationary" .
+
+nus:Preceding      a nus:SpatialZone ; rdfs:label "Preceding" .
+nus:Following      a nus:SpatialZone ; rdfs:label "Following" .
+nus:LeftPreceding  a nus:SpatialZone ; rdfs:label "LeftPreceding" .
+nus:LeftAlongside  a nus:SpatialZone ; rdfs:label "LeftAlongside" .
+nus:LeftFollowing  a nus:SpatialZone ; rdfs:label "LeftFollowing" .
+nus:RightPreceding a nus:SpatialZone ; rdfs:label "RightPreceding" .
+nus:RightAlongside a nus:SpatialZone ; rdfs:label "RightAlongside" .
+nus:RightFollowing a nus:SpatialZone ; rdfs:label "RightFollowing" .
+
+nus:High   a nus:TTCRiskLevel ; rdfs:label "High" .
+nus:Medium a nus:TTCRiskLevel ; rdfs:label "Medium" .
+nus:Low    a nus:TTCRiskLevel ; rdfs:label "Low" .

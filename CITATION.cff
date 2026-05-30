@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "If you use this software or the generated knowledge graph, please cite the accompanying paper."
+title: "nuScenes Intention Knowledge Graph (NIKG)"
+abstract: >-
+  A deterministic pipeline that builds an OWL/RDF Turtle knowledge graph from the
+  nuScenes dataset, promoting three intention-relevant relations
+  (ego-relative motion, spatial configuration, and time-to-collision risk) to
+  first-class properties on each observed scene participant.
+type: software
+authors:
+  - given-names: Khaled
+    family-names: Nowara
+    email: k.nowara02@gmail.com
+    affiliation: "German University in Cairo, Cairo, Egypt"
+  - given-names: Mohamed
+    family-names: Manzour
+    email: ahmed.manzour@uah.es
+    affiliation: "Computer Engineering Department, University of Alcalá, Madrid, Spain"
+  - given-names: Catherine
+    family-names: Elias
+    email: catherine.elias@guc.edu.eg
+    affiliation: "German University in Cairo, Cairo, Egypt"
+keywords:
+  - knowledge graph
+  - autonomous driving
+  - nuScenes
+  - intention prediction
+  - semantic representation
+  - OWL
+  - RDF
+license: MIT
+repository-code: "https://github.com/REPLACE-ME/nuscenes-intention-knowledge-graph"
+preferred-citation:
+  type: conference-paper
+  title: "A Semantic Knowledge Graph Construction Pipeline for Vehicle Intention Prediction in nuScenes"
+  year: 2026
+  authors:
+    - given-names: Khaled
+      family-names: Nowara
+      affiliation: "German University in Cairo, Cairo, Egypt"
+    - given-names: Mohamed
+      family-names: Manzour
+      affiliation: "Computer Engineering Department, University of Alcalá, Madrid, Spain"
+    - given-names: Catherine
+      family-names: Elias
+      affiliation: "German University in Cairo, Cairo, Egypt"

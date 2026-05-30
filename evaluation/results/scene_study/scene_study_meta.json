@@ -1,0 +1,52 @@
+{
+  "scene": "scene-1100",
+  "frames_studied": [
+    19,
+    20,
+    21,
+    22
+  ],
+  "total_scene_keyframes": 40,
+  "per_frame": [
+    {
+      "frame_index": 19,
+      "participants": 23,
+      "motion_labelled": 23,
+      "spatial_labelled": 20,
+      "ttc_labelled": 6,
+      "ttc_high": 1,
+      "ttc_medium": 1,
+      "ttc_low": 4
+    },
+    {
+      "frame_index": 20,
+      "participants": 23,
+      "motion_labelled": 22,
+      "spatial_labelled": 18,
+      "ttc_labelled": 5,
+      "ttc_high": 1,
+      "ttc_medium": 1,
+      "ttc_low": 3
+    },
+    {
+      "frame_index": 21,
+      "participants": 23,
+      "motion_labelled": 23,
+      "spatial_labelled": 18,
+      "ttc_labelled": 7,
+      "ttc_high": 0,
+      "ttc_medium": 3,
+      "ttc_low": 4
+    },
+    {
+      "frame_index": 22,
+      "participants": 23,
+      "motion_labelled": 23,
+      "spatial_labelled": 19,
+      "ttc_labelled": 5,
+      "ttc_high": 0,
+      "ttc_medium": 2,
+      "ttc_low": 3
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "total_triples": 211335,
+  "classes": {
+    "http://www.nuscenes.org/nuScenes/Dataset": 1,
+    "http://www.w3.org/2002/07/owl#ObjectProperty": 13,
+    "http://www.w3.org/2002/07/owl#DatatypeProperty": 10,
+    "http://www.w3.org/2002/07/owl#Ontology": 1,
+    "http://www.nuscenes.org/nuScenes/EgoVehicle": 10,
+    "http://www.nuscenes.org/nuScenes/Participant": 911,
+    "http://www.nuscenes.org/nuScenes/Point2D": 18538,
+    "http://www.nuscenes.org/nuScenes/SceneParticipant": 18538,
+    "http://www.nuscenes.org/nuScenes/Sequence": 10,
+    "http://www.nuscenes.org/nuScenes/Trip": 10,
+    "http://www.w3.org/2002/07/owl#Class": 16,
+    "http://www.nuscenes.org/nuScenes/Scene": 404,
+    "http://www.nuscenes.org/nuScenes/AgentCoarseType": 4,
+    "http://www.nuscenes.org/nuScenes/SpatialZone": 8,
+    "http://www.nuscenes.org/nuScenes/TTCRiskLevel": 3,
+    "http://www.nuscenes.org/nuScenes/MotionState": 3
+  },
+  "properties": {
+    "http://www.nuscenes.org/nuScenes/isSceneParticipantOf": 18538,
+    "http://www.nuscenes.org/nuScenes/hasSceneParticipant": 18538,
+    "http://www.nuscenes.org/nuScenes/hasPosition": 18538,
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": 38480,
+    "http://www.nuscenes.org/nuScenes/hasCoarseCategory": 18538,
+    "http://www.nuscenes.org/nuScenes/motionTowardEgo": 17627,
+    "http://www.nuscenes.org/nuScenes/hasX": 18538,
+    "http://www.nuscenes.org/nuScenes/spatialConfiguration": 15166,
+    "http://www.nuscenes.org/nuScenes/hasNuScenesCategory": 18538,
+    "http://www.nuscenes.org/nuScenes/ttcRisk": 8156,
+    "http://www.nuscenes.org/nuScenes/hasY": 18538,
+    "http://www.nuscenes.org/nuScenes/hasFrameIndex": 404,
+    "http://www.nuscenes.org/nuScenes/hasScene": 404,
+    "http://www.nuscenes.org/nuScenes/hasPreviousScene": 394,
+    "http://www.nuscenes.org/nuScenes/hasNextScene": 394,
+    "http://www.nuscenes.org/nuScenes/hasTimestamp": 404,
+    "http://www.w3.org/2000/01/rdf-schema#domain": 19,
+    "http://www.nuscenes.org/nuScenes/hasSequence": 10,
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": 18,
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": 18,
+    "http://www.nuscenes.org/nuScenes/hasDescription": 10,
+    "http://www.w3.org/2002/07/owl#equivalentClass": 4,
+    "http://www.nuscenes.org/nuScenes/hasName": 1,
+    "http://www.nuscenes.org/nuScenes/hasTrip": 10,
+    "http://www.w3.org/2000/01/rdf-schema#range": 23,
+    "http://www.w3.org/2002/07/owl#oneOf": 4,
+    "http://www.nuscenes.org/nuScenes/hasEgoVehicle": 10,
+    "http://www.w3.org/2000/01/rdf-schema#comment": 10,
+    "http://www.w3.org/2000/01/rdf-schema#label": 1,
+    "http://www.nuscenes.org/nuScenes/sequenceCount": 1,
+    "http://www.nuscenes.org/nuScenes/hasVersion": 1
+  },
+  "relation_values": {
+    "motionTowardEgo": {
+      "Approaching": 7125,
+      "Receding": 6718,
+      "Stationary": 3784
+    },
+    "spatialConfiguration": {
+      "RightFollowing": 3908,
+      "RightPreceding": 4341,
+      "Following": 585,
+      "LeftAlongside": 343,
+      "LeftFollowing": 2247,
+      "LeftPreceding": 2420,
+      "RightAlongside": 863,
+      "Preceding": 459
+    },
+    "ttcRisk": {
+      "Medium": 3171,
+      "High": 1990,
+      "Low": 2995
+    },
+    "hasCoarseCategory": {
+      "Pedestrian": 5040,
+      "MovableObject": 3796,
+      "Vehicle": 9648,
+      "Infrastructure": 54
+    }
+  }
+}

@@ -1,0 +1,11 @@
+# Python 3.11 recommended (see environment.yml for a conda environment).
+# Install with: pip install -r requirements.txt
+nuscenes-devkit>=1.1.9
+numpy
+opencv-python
+rdflib
+pyquaternion
+Shapely
+matplotlib
+tqdm
+pytest

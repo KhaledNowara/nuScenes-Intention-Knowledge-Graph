@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local / large
+traces/annotated_frames/
+graphs/*.sparql
+
+# Regenerated (optional — keep JSON/MD if you commit paper numbers)
+# evaluation/results/spot_checks/

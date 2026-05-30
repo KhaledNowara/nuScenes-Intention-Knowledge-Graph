@@ -1,0 +1,22 @@
+{
+  "ttcHigh_implies_approaching": {
+    "description": "ttcRisk=High \u2192 motionTowardEgo=Approaching",
+    "total": 1990,
+    "pass": 1988,
+    "pass_rate": 0.999
+  },
+  "ttcHigh_implies_forward_zone": {
+    "description": "ttcRisk=High \u2192 spatialConfiguration in forward zone",
+    "total": 1892,
+    "pass": 1688,
+    "pass_rate": 0.8922,
+    "note": "98 High-risk agents had no spatialConfiguration label (excluded from denominator)"
+  },
+  "stationary_implies_not_high": {
+    "description": "motionTowardEgo=Stationary \u2192 ttcRisk \u2260 High",
+    "total": 3784,
+    "pass": 3782,
+    "violations": 2,
+    "pass_rate": 0.9995
+  }
+}

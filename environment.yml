@@ -1,0 +1,16 @@
+name: exp006
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+    - nuscenes-devkit>=1.1.9
+    - numpy
+    - opencv-python
+    - rdflib
+    - pyquaternion
+    - Shapely
+    - matplotlib
+    - tqdm
+    - pytest

@@ -1,0 +1,35 @@
+{
+  "per_label_total": {
+    "Approaching": 7020,
+    "Stationary": 3676,
+    "Receding": 6050
+  },
+  "per_label_pass": {
+    "Approaching": 6386,
+    "Stationary": 3112,
+    "Receding": 5994
+  },
+  "per_label_accuracy": {
+    "Approaching": 0.9096866096866096,
+    "Stationary": 0.8465723612622416,
+    "Receding": 0.9907438016528926
+  },
+  "overall_accuracy": 0.9251164457183805,
+  "confusion": {
+    "Approaching": {
+      "Approaching": 6386,
+      "Stationary": 478,
+      "Receding": 156
+    },
+    "Stationary": {
+      "Stationary": 3112,
+      "Receding": 477,
+      "Approaching": 87
+    },
+    "Receding": {
+      "Receding": 5994,
+      "Stationary": 54,
+      "Approaching": 2
+    }
+  }
+}

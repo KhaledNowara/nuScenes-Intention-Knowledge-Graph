@@ -1,0 +1,3153 @@
+{
+  "scene": "scene-1100",
+  "frames_studied": [
+    19,
+    20,
+    21,
+    22
+  ],
+  "constants": {
+    "delta_t_s": 0.5,
+    "motion_threshold_m": 0.5,
+    "min_closing_speed_m_per_s": 0.1,
+    "ttc_high_upper_s": 4.0,
+    "ttc_medium_upper_s": 10.0,
+    "spatial_max_range_m": 50.0,
+    "spatial_long_band_m": 3.0,
+    "spatial_lat_band_m": 1.75
+  },
+  "per_frame": {
+    "19": [
+      {
+        "sp_id": "SP_scene_1100_019_541a7a65ec00",
+        "instance_token": "0b2ba0a3a3874e4a9863541a7a65ec00",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 8.27,
+          "d_curr_m": 8.365,
+          "delta_d_m": 0.095,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -7.17,
+          "y_body_m": 4.309,
+          "range_m": 8.365,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.19,
+          "note": "not emitted \u2014 closing speed -0.19 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_a804db6fe9c2",
+        "instance_token": "e548e74bf98d49769949a804db6fe9c2",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Approaching",
+          "d_prev_m": 30.167,
+          "d_curr_m": 29.6,
+          "delta_d_m": -0.566,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "Following",
+          "x_body_m": -29.593,
+          "y_body_m": 0.646,
+          "range_m": 29.6,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Low",
+          "d_prev_m": 30.167,
+          "d_curr_m": 29.6,
+          "closing_speed_m_per_s": 1.133,
+          "ttc_s": 26.133,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_378fb858beb4",
+        "instance_token": "246622de508246f8b2da378fb858beb4",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 10.291,
+          "d_curr_m": 14.43,
+          "delta_d_m": 4.139,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightFollowing",
+          "x_body_m": -9.29,
+          "y_body_m": -11.041,
+          "range_m": 14.43,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -8.278,
+          "note": "not emitted \u2014 closing speed -8.278 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_01f47ef1cbd0",
+        "instance_token": "20200e733c334714b91a01f47ef1cbd0",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 21.296,
+          "d_curr_m": 21.808,
+          "delta_d_m": 0.512,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -20.15,
+          "y_body_m": 8.342,
+          "range_m": 21.808,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -1.024,
+          "note": "not emitted \u2014 closing speed -1.024 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_651025150bdc",
+        "instance_token": "1e5f2a84bbe645c29e83651025150bdc",
+        "type_label": "vehicle.motorcycle",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 20.899,
+          "d_curr_m": 21.925,
+          "delta_d_m": 1.026,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 15.884,
+          "y_body_m": -15.113,
+          "range_m": 21.925,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -2.051,
+          "note": "not emitted \u2014 closing speed -2.051 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_f4c11233de34",
+        "instance_token": "47b04d517ed64f92ad6af4c11233de34",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 17.882,
+          "d_curr_m": 17.857,
+          "delta_d_m": -0.025,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightAlongside",
+          "x_body_m": 1.622,
+          "y_body_m": -17.783,
+          "range_m": 17.857,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.05,
+          "note": "not emitted \u2014 closing speed 0.05 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_68a8bf946d3e",
+        "instance_token": "baa84e9048974b67a0c168a8bf946d3e",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 10.287,
+          "d_curr_m": 10.411,
+          "delta_d_m": 0.123,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -9.717,
+          "y_body_m": 3.735,
+          "range_m": 10.411,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.246,
+          "note": "not emitted \u2014 closing speed -0.246 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_1c53781f92e0",
+        "instance_token": "90a1246128ad470c85bd1c53781f92e0",
+        "type_label": "vehicle.bus.rigid",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 79.382,
+          "d_curr_m": 80.865,
+          "delta_d_m": 1.483,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": null,
+          "x_body_m": 69.507,
+          "y_body_m": 41.328,
+          "range_m": 80.865,
+          "excluded_range": true,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -2.967,
+          "note": "not emitted \u2014 closing speed -2.967 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_45e15aab5ac8",
+        "instance_token": "759185c2435a4fb393a145e15aab5ac8",
+        "type_label": "vehicle.bus.rigid",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 26.791,
+          "d_curr_m": 26.746,
+          "delta_d_m": -0.045,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 10.948,
+          "y_body_m": -24.403,
+          "range_m": 26.746,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.09,
+          "note": "not emitted \u2014 closing speed 0.09 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_a6a655978ada",
+        "instance_token": "7a88efefda9f4fc3a30fa6a655978ada",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 20.539,
+          "d_curr_m": 20.456,
+          "delta_d_m": -0.082,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 19.53,
+          "y_body_m": -6.088,
+          "range_m": 20.456,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Low",
+          "d_prev_m": 20.539,
+          "d_curr_m": 20.456,
+          "closing_speed_m_per_s": 0.165,
+          "ttc_s": 124.005,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_420c7fb99649",
+        "instance_token": "7c7ea45167174debb191420c7fb99649",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 9.42,
+          "d_curr_m": 9.268,
+          "delta_d_m": -0.153,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightFollowing",
+          "x_body_m": -8.74,
+          "y_body_m": -3.083,
+          "range_m": 9.268,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Low",
+          "d_prev_m": 9.42,
+          "d_curr_m": 9.268,
+          "closing_speed_m_per_s": 0.305,
+          "ttc_s": 30.382,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_c93943d3a180",
+        "instance_token": "e3c44d83d35543d1b638c93943d3a180",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 37.106,
+          "d_curr_m": 41.857,
+          "delta_d_m": 4.751,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightFollowing",
+          "x_body_m": -37.867,
+          "y_body_m": -17.834,
+          "range_m": 41.857,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -9.501,
+          "note": "not emitted \u2014 closing speed -9.501 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_d9987d64d355",
+        "instance_token": "14201e2f4fcf44b58240d9987d64d355",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 31.247,
+          "d_curr_m": 31.157,
+          "delta_d_m": -0.089,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 9.482,
+          "y_body_m": -29.68,
+          "range_m": 31.157,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Low",
+          "d_prev_m": 31.247,
+          "d_curr_m": 31.157,
+          "closing_speed_m_per_s": 0.178,
+          "ttc_s": 174.811,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_a90302944c19",
+        "instance_token": "0ba56cee062b419a80a6a90302944c19",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Approaching",
+          "d_prev_m": 22.222,
+          "d_curr_m": 19.025,
+          "delta_d_m": -3.197,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "Preceding",
+          "x_body_m": 19.022,
+          "y_body_m": 0.34,
+          "range_m": 19.025,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "High",
+          "d_prev_m": 22.222,
+          "d_curr_m": 19.025,
+          "closing_speed_m_per_s": 6.395,
+          "ttc_s": 2.975,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_9a73e105c3c4",
+        "instance_token": "bb0f40c613904cdcb3299a73e105c3c4",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 43.852,
+          "d_curr_m": 48.445,
+          "delta_d_m": 4.593,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightFollowing",
+          "x_body_m": -42.415,
+          "y_body_m": -23.407,
+          "range_m": 48.445,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -9.187,
+          "note": "not emitted \u2014 closing speed -9.187 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_f57669d7a8b4",
+        "instance_token": "7028b22052c3450da6eef57669d7a8b4",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 5.848,
+          "d_curr_m": 5.954,
+          "delta_d_m": 0.106,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "Following",
+          "x_body_m": -5.713,
+          "y_body_m": -1.678,
+          "range_m": 5.954,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.213,
+          "note": "not emitted \u2014 closing speed -0.213 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_6a768808246d",
+        "instance_token": "ca291f5d8bf7447ca85d6a768808246d",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 23.428,
+          "d_curr_m": 23.386,
+          "delta_d_m": -0.042,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 6.911,
+          "y_body_m": -22.341,
+          "range_m": 23.386,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.085,
+          "note": "not emitted \u2014 closing speed 0.085 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_884b54b757ac",
+        "instance_token": "e15f0fb13c744ef1a716884b54b757ac",
+        "type_label": "vehicle.motorcycle",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Approaching",
+          "d_prev_m": 30.815,
+          "d_curr_m": 28.883,
+          "delta_d_m": -1.932,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftPreceding",
+          "x_body_m": 19.987,
+          "y_body_m": 20.85,
+          "range_m": 28.883,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Medium",
+          "d_prev_m": 30.815,
+          "d_curr_m": 28.883,
+          "closing_speed_m_per_s": 3.864,
+          "ttc_s": 7.474,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_463324be8536",
+        "instance_token": "0debc457dad44487be97463324be8536",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 54.02,
+          "d_curr_m": 55.875,
+          "delta_d_m": 1.855,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": null,
+          "x_body_m": 28.037,
+          "y_body_m": -48.332,
+          "range_m": 55.875,
+          "excluded_range": true,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -3.71,
+          "note": "not emitted \u2014 closing speed -3.71 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_402c70770e3b",
+        "instance_token": "7b644b3fb6634f13bf30402c70770e3b",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 8.795,
+          "d_curr_m": 8.909,
+          "delta_d_m": 0.114,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -7.85,
+          "y_body_m": 4.215,
+          "range_m": 8.909,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.228,
+          "note": "not emitted \u2014 closing speed -0.228 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_98c29acb8087",
+        "instance_token": "c7925b44db7f4cfdb37e98c29acb8087",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 58.297,
+          "d_curr_m": 58.642,
+          "delta_d_m": 0.345,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": null,
+          "x_body_m": 49.75,
+          "y_body_m": 31.046,
+          "range_m": 58.642,
+          "excluded_range": true,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.69,
+          "note": "not emitted \u2014 closing speed -0.69 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_24e0072aa659",
+        "instance_token": "1c6ea643f2d04632ac5624e0072aa659",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 11.405,
+          "d_curr_m": 11.523,
+          "delta_d_m": 0.118,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -10.344,
+          "y_body_m": 5.078,
+          "range_m": 11.523,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.237,
+          "note": "not emitted \u2014 closing speed -0.237 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_019_31b871a455d1",
+        "instance_token": "60e1ec6251134f9a8e2031b871a455d1",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 10.221,
+          "d_curr_m": 10.381,
+          "delta_d_m": 0.16,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -8.872,
+          "y_body_m": 5.39,
+          "range_m": 10.381,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.319,
+          "note": "not emitted \u2014 closing speed -0.319 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      }
+    ],
+    "20": [
+      {
+        "sp_id": "SP_scene_1100_020_541a7a65ec00",
+        "instance_token": "0b2ba0a3a3874e4a9863541a7a65ec00",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 8.365,
+          "d_curr_m": 8.407,
+          "delta_d_m": 0.041,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -7.223,
+          "y_body_m": 4.301,
+          "range_m": 8.407,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.083,
+          "note": "not emitted \u2014 closing speed -0.083 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_a804db6fe9c2",
+        "instance_token": "e548e74bf98d49769949a804db6fe9c2",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Approaching",
+          "d_prev_m": 29.6,
+          "d_curr_m": 28.956,
+          "delta_d_m": -0.644,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "Following",
+          "x_body_m": -28.946,
+          "y_body_m": 0.745,
+          "range_m": 28.956,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Low",
+          "d_prev_m": 29.6,
+          "d_curr_m": 28.956,
+          "closing_speed_m_per_s": 1.289,
+          "ttc_s": 22.466,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_378fb858beb4",
+        "instance_token": "246622de508246f8b2da378fb858beb4",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 14.43,
+          "d_curr_m": 18.999,
+          "delta_d_m": 4.569,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightFollowing",
+          "x_body_m": -14.086,
+          "y_body_m": -12.75,
+          "range_m": 18.999,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -9.139,
+          "note": "not emitted \u2014 closing speed -9.139 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_01f47ef1cbd0",
+        "instance_token": "20200e733c334714b91a01f47ef1cbd0",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 21.808,
+          "d_curr_m": 22.209,
+          "delta_d_m": 0.4,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -20.378,
+          "y_body_m": 8.83,
+          "range_m": 22.209,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.8,
+          "note": "not emitted \u2014 closing speed -0.8 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_651025150bdc",
+        "instance_token": "1e5f2a84bbe645c29e83651025150bdc",
+        "type_label": "vehicle.motorcycle",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 21.925,
+          "d_curr_m": 23.884,
+          "delta_d_m": 1.959,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 16.643,
+          "y_body_m": -17.13,
+          "range_m": 23.884,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -3.918,
+          "note": "not emitted \u2014 closing speed -3.918 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_044379697197",
+        "instance_token": "21cdc9f24c614a6197fd044379697197",
+        "type_label": "vehicle.motorcycle",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": null,
+          "note": "first_appearance \u2014 no previous keyframe",
+          "d_curr_m": 55.542
+        },
+        "spatial": {
+          "label": null,
+          "x_body_m": 51.835,
+          "y_body_m": 19.951,
+          "range_m": 55.542,
+          "excluded_range": true,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "note": "first_appearance \u2014 no previous keyframe"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_f4c11233de34",
+        "instance_token": "47b04d517ed64f92ad6af4c11233de34",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 17.857,
+          "d_curr_m": 17.839,
+          "delta_d_m": -0.018,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightAlongside",
+          "x_body_m": 1.566,
+          "y_body_m": -17.77,
+          "range_m": 17.839,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.035,
+          "note": "not emitted \u2014 closing speed 0.035 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_68a8bf946d3e",
+        "instance_token": "baa84e9048974b67a0c168a8bf946d3e",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 10.411,
+          "d_curr_m": 10.476,
+          "delta_d_m": 0.066,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -9.789,
+          "y_body_m": 3.732,
+          "range_m": 10.476,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.132,
+          "note": "not emitted \u2014 closing speed -0.132 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_1c53781f92e0",
+        "instance_token": "90a1246128ad470c85bd1c53781f92e0",
+        "type_label": "vehicle.bus.rigid",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 80.865,
+          "d_curr_m": 82.399,
+          "delta_d_m": 1.534,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": null,
+          "x_body_m": 70.924,
+          "y_body_m": 41.944,
+          "range_m": 82.399,
+          "excluded_range": true,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -3.068,
+          "note": "not emitted \u2014 closing speed -3.068 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_45e15aab5ac8",
+        "instance_token": "759185c2435a4fb393a145e15aab5ac8",
+        "type_label": "vehicle.bus.rigid",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 26.746,
+          "d_curr_m": 26.726,
+          "delta_d_m": -0.02,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 10.893,
+          "y_body_m": -24.406,
+          "range_m": 26.726,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.039,
+          "note": "not emitted \u2014 closing speed 0.039 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_a6a655978ada",
+        "instance_token": "7a88efefda9f4fc3a30fa6a655978ada",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 20.456,
+          "d_curr_m": 20.454,
+          "delta_d_m": -0.003,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 19.707,
+          "y_body_m": -5.478,
+          "range_m": 20.454,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.005,
+          "note": "not emitted \u2014 closing speed 0.005 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_420c7fb99649",
+        "instance_token": "7c7ea45167174debb191420c7fb99649",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 9.268,
+          "d_curr_m": 9.051,
+          "delta_d_m": -0.217,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightFollowing",
+          "x_body_m": -8.354,
+          "y_body_m": -3.482,
+          "range_m": 9.051,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Low",
+          "d_prev_m": 9.268,
+          "d_curr_m": 9.051,
+          "closing_speed_m_per_s": 0.434,
+          "ttc_s": 20.865,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_d9987d64d355",
+        "instance_token": "14201e2f4fcf44b58240d9987d64d355",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 31.157,
+          "d_curr_m": 31.088,
+          "delta_d_m": -0.069,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 9.39,
+          "y_body_m": -29.636,
+          "range_m": 31.088,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Low",
+          "d_prev_m": 31.157,
+          "d_curr_m": 31.088,
+          "closing_speed_m_per_s": 0.138,
+          "ttc_s": 224.936,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_a90302944c19",
+        "instance_token": "0ba56cee062b419a80a6a90302944c19",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Approaching",
+          "d_prev_m": 19.025,
+          "d_curr_m": 16.852,
+          "delta_d_m": -2.173,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 16.731,
+          "y_body_m": -2.014,
+          "range_m": 16.852,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "High",
+          "d_prev_m": 19.025,
+          "d_curr_m": 16.852,
+          "closing_speed_m_per_s": 4.346,
+          "ttc_s": 3.878,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_9a73e105c3c4",
+        "instance_token": "bb0f40c613904cdcb3299a73e105c3c4",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 48.445,
+          "d_curr_m": 52.992,
+          "delta_d_m": 4.547,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": null,
+          "x_body_m": -46.781,
+          "y_body_m": -24.894,
+          "range_m": 52.992,
+          "excluded_range": true,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -9.095,
+          "note": "not emitted \u2014 closing speed -9.095 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_f57669d7a8b4",
+        "instance_token": "7028b22052c3450da6eef57669d7a8b4",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 5.954,
+          "d_curr_m": 6.001,
+          "delta_d_m": 0.047,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "Following",
+          "x_body_m": -5.763,
+          "y_body_m": -1.673,
+          "range_m": 6.001,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.095,
+          "note": "not emitted \u2014 closing speed -0.095 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_6a768808246d",
+        "instance_token": "ca291f5d8bf7447ca85d6a768808246d",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 23.386,
+          "d_curr_m": 23.362,
+          "delta_d_m": -0.024,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 6.852,
+          "y_body_m": -22.334,
+          "range_m": 23.362,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.047,
+          "note": "not emitted \u2014 closing speed 0.047 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_884b54b757ac",
+        "instance_token": "e15f0fb13c744ef1a716884b54b757ac",
+        "type_label": "vehicle.motorcycle",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Approaching",
+          "d_prev_m": 28.883,
+          "d_curr_m": 26.824,
+          "delta_d_m": -2.059,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftPreceding",
+          "x_body_m": 18.124,
+          "y_body_m": 19.774,
+          "range_m": 26.824,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Medium",
+          "d_prev_m": 28.883,
+          "d_curr_m": 26.824,
+          "closing_speed_m_per_s": 4.118,
+          "ttc_s": 6.514,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_463324be8536",
+        "instance_token": "0debc457dad44487be97463324be8536",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 55.875,
+          "d_curr_m": 57.334,
+          "delta_d_m": 1.459,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": null,
+          "x_body_m": 29.041,
+          "y_body_m": -49.436,
+          "range_m": 57.334,
+          "excluded_range": true,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -2.918,
+          "note": "not emitted \u2014 closing speed -2.918 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_402c70770e3b",
+        "instance_token": "7b644b3fb6634f13bf30402c70770e3b",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 8.909,
+          "d_curr_m": 8.97,
+          "delta_d_m": 0.06,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -7.925,
+          "y_body_m": 4.202,
+          "range_m": 8.97,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.121,
+          "note": "not emitted \u2014 closing speed -0.121 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_98c29acb8087",
+        "instance_token": "c7925b44db7f4cfdb37e98c29acb8087",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 58.642,
+          "d_curr_m": 59.039,
+          "delta_d_m": 0.397,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": null,
+          "x_body_m": 50.067,
+          "y_body_m": 31.287,
+          "range_m": 59.039,
+          "excluded_range": true,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.793,
+          "note": "not emitted \u2014 closing speed -0.793 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_24e0072aa659",
+        "instance_token": "1c6ea643f2d04632ac5624e0072aa659",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 11.523,
+          "d_curr_m": 11.571,
+          "delta_d_m": 0.047,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -10.407,
+          "y_body_m": 5.058,
+          "range_m": 11.571,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.095,
+          "note": "not emitted \u2014 closing speed -0.095 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_020_31b871a455d1",
+        "instance_token": "60e1ec6251134f9a8e2031b871a455d1",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 10.381,
+          "d_curr_m": 10.421,
+          "delta_d_m": 0.04,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -8.943,
+          "y_body_m": 5.349,
+          "range_m": 10.421,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.079,
+          "note": "not emitted \u2014 closing speed -0.079 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      }
+    ],
+    "21": [
+      {
+        "sp_id": "SP_scene_1100_021_541a7a65ec00",
+        "instance_token": "0b2ba0a3a3874e4a9863541a7a65ec00",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 8.407,
+          "d_curr_m": 8.399,
+          "delta_d_m": -0.008,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -7.212,
+          "y_body_m": 4.304,
+          "range_m": 8.399,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.016,
+          "note": "not emitted \u2014 closing speed 0.016 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_a804db6fe9c2",
+        "instance_token": "e548e74bf98d49769949a804db6fe9c2",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Approaching",
+          "d_prev_m": 28.956,
+          "d_curr_m": 28.267,
+          "delta_d_m": -0.689,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "Following",
+          "x_body_m": -28.255,
+          "y_body_m": 0.832,
+          "range_m": 28.267,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Low",
+          "d_prev_m": 28.956,
+          "d_curr_m": 28.267,
+          "closing_speed_m_per_s": 1.378,
+          "ttc_s": 20.507,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_378fb858beb4",
+        "instance_token": "246622de508246f8b2da378fb858beb4",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 18.999,
+          "d_curr_m": 23.736,
+          "delta_d_m": 4.737,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightFollowing",
+          "x_body_m": -18.805,
+          "y_body_m": -14.483,
+          "range_m": 23.736,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -9.474,
+          "note": "not emitted \u2014 closing speed -9.474 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_01f47ef1cbd0",
+        "instance_token": "20200e733c334714b91a01f47ef1cbd0",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 22.209,
+          "d_curr_m": 22.444,
+          "delta_d_m": 0.236,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -20.354,
+          "y_body_m": 9.459,
+          "range_m": 22.444,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.471,
+          "note": "not emitted \u2014 closing speed -0.471 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_651025150bdc",
+        "instance_token": "1e5f2a84bbe645c29e83651025150bdc",
+        "type_label": "vehicle.motorcycle",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 23.884,
+          "d_curr_m": 25.962,
+          "delta_d_m": 2.078,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 17.641,
+          "y_body_m": -19.047,
+          "range_m": 25.962,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -4.156,
+          "note": "not emitted \u2014 closing speed -4.156 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_044379697197",
+        "instance_token": "21cdc9f24c614a6197fd044379697197",
+        "type_label": "vehicle.motorcycle",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Approaching",
+          "d_prev_m": 55.542,
+          "d_curr_m": 50.449,
+          "delta_d_m": -5.092,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": null,
+          "x_body_m": 47.115,
+          "y_body_m": 18.036,
+          "range_m": 50.449,
+          "excluded_range": true,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Medium",
+          "d_prev_m": 55.542,
+          "d_curr_m": 50.449,
+          "closing_speed_m_per_s": 10.185,
+          "ttc_s": 4.953,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_f4c11233de34",
+        "instance_token": "47b04d517ed64f92ad6af4c11233de34",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 17.839,
+          "d_curr_m": 17.826,
+          "delta_d_m": -0.013,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightAlongside",
+          "x_body_m": 1.592,
+          "y_body_m": -17.754,
+          "range_m": 17.826,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.027,
+          "note": "not emitted \u2014 closing speed 0.027 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_68a8bf946d3e",
+        "instance_token": "baa84e9048974b67a0c168a8bf946d3e",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 10.476,
+          "d_curr_m": 10.441,
+          "delta_d_m": -0.036,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -9.747,
+          "y_body_m": 3.741,
+          "range_m": 10.441,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.072,
+          "note": "not emitted \u2014 closing speed 0.072 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_1c53781f92e0",
+        "instance_token": "90a1246128ad470c85bd1c53781f92e0",
+        "type_label": "vehicle.bus.rigid",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 82.399,
+          "d_curr_m": 84.361,
+          "delta_d_m": 1.962,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": null,
+          "x_body_m": 72.521,
+          "y_body_m": 43.098,
+          "range_m": 84.361,
+          "excluded_range": true,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -3.924,
+          "note": "not emitted \u2014 closing speed -3.924 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_45e15aab5ac8",
+        "instance_token": "759185c2435a4fb393a145e15aab5ac8",
+        "type_label": "vehicle.bus.rigid",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 26.726,
+          "d_curr_m": 26.727,
+          "delta_d_m": 0.001,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 10.901,
+          "y_body_m": -24.402,
+          "range_m": 26.727,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.001,
+          "note": "not emitted \u2014 closing speed -0.001 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_a6a655978ada",
+        "instance_token": "7a88efefda9f4fc3a30fa6a655978ada",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 20.454,
+          "d_curr_m": 20.522,
+          "delta_d_m": 0.068,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 19.945,
+          "y_body_m": -4.833,
+          "range_m": 20.522,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.137,
+          "note": "not emitted \u2014 closing speed -0.137 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_420c7fb99649",
+        "instance_token": "7c7ea45167174debb191420c7fb99649",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 9.051,
+          "d_curr_m": 8.781,
+          "delta_d_m": -0.27,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightFollowing",
+          "x_body_m": -7.884,
+          "y_body_m": -3.865,
+          "range_m": 8.781,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Low",
+          "d_prev_m": 9.051,
+          "d_curr_m": 8.781,
+          "closing_speed_m_per_s": 0.54,
+          "ttc_s": 16.257,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_d9987d64d355",
+        "instance_token": "14201e2f4fcf44b58240d9987d64d355",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 31.088,
+          "d_curr_m": 31.035,
+          "delta_d_m": -0.053,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 9.4,
+          "y_body_m": -29.577,
+          "range_m": 31.035,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Low",
+          "d_prev_m": 31.088,
+          "d_curr_m": 31.035,
+          "closing_speed_m_per_s": 0.106,
+          "ttc_s": 291.685,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_a90302944c19",
+        "instance_token": "0ba56cee062b419a80a6a90302944c19",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Approaching",
+          "d_prev_m": 16.852,
+          "d_curr_m": 15.607,
+          "delta_d_m": -1.245,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 14.894,
+          "y_body_m": -4.665,
+          "range_m": 15.607,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Medium",
+          "d_prev_m": 16.852,
+          "d_curr_m": 15.607,
+          "closing_speed_m_per_s": 2.489,
+          "ttc_s": 6.27,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_9a73e105c3c4",
+        "instance_token": "bb0f40c613904cdcb3299a73e105c3c4",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 52.992,
+          "d_curr_m": 57.435,
+          "delta_d_m": 4.443,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": null,
+          "x_body_m": -50.987,
+          "y_body_m": -26.44,
+          "range_m": 57.435,
+          "excluded_range": true,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -8.886,
+          "note": "not emitted \u2014 closing speed -8.886 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_f57669d7a8b4",
+        "instance_token": "7028b22052c3450da6eef57669d7a8b4",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 6.001,
+          "d_curr_m": 5.998,
+          "delta_d_m": -0.003,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "Following",
+          "x_body_m": -5.758,
+          "y_body_m": -1.679,
+          "range_m": 5.998,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.007,
+          "note": "not emitted \u2014 closing speed 0.007 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_6a768808246d",
+        "instance_token": "ca291f5d8bf7447ca85d6a768808246d",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 23.362,
+          "d_curr_m": 23.25,
+          "delta_d_m": -0.112,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 6.81,
+          "y_body_m": -22.23,
+          "range_m": 23.25,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Low",
+          "d_prev_m": 23.362,
+          "d_curr_m": 23.25,
+          "closing_speed_m_per_s": 0.225,
+          "ttc_s": 103.423,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_884b54b757ac",
+        "instance_token": "e15f0fb13c744ef1a716884b54b757ac",
+        "type_label": "vehicle.motorcycle",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Approaching",
+          "d_prev_m": 26.824,
+          "d_curr_m": 24.816,
+          "delta_d_m": -2.008,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftPreceding",
+          "x_body_m": 16.281,
+          "y_body_m": 18.729,
+          "range_m": 24.816,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Medium",
+          "d_prev_m": 26.824,
+          "d_curr_m": 24.816,
+          "closing_speed_m_per_s": 4.015,
+          "ttc_s": 6.181,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_463324be8536",
+        "instance_token": "0debc457dad44487be97463324be8536",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 57.334,
+          "d_curr_m": 58.754,
+          "delta_d_m": 1.419,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": null,
+          "x_body_m": 30.323,
+          "y_body_m": -50.324,
+          "range_m": 58.754,
+          "excluded_range": true,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -2.838,
+          "note": "not emitted \u2014 closing speed -2.838 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_402c70770e3b",
+        "instance_token": "7b644b3fb6634f13bf30402c70770e3b",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 8.97,
+          "d_curr_m": 8.984,
+          "delta_d_m": 0.014,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -7.954,
+          "y_body_m": 4.175,
+          "range_m": 8.984,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.028,
+          "note": "not emitted \u2014 closing speed -0.028 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_98c29acb8087",
+        "instance_token": "c7925b44db7f4cfdb37e98c29acb8087",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 59.039,
+          "d_curr_m": 60.202,
+          "delta_d_m": 1.164,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": null,
+          "x_body_m": 50.973,
+          "y_body_m": 32.032,
+          "range_m": 60.202,
+          "excluded_range": true,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -2.327,
+          "note": "not emitted \u2014 closing speed -2.327 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_24e0072aa659",
+        "instance_token": "1c6ea643f2d04632ac5624e0072aa659",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 11.571,
+          "d_curr_m": 11.572,
+          "delta_d_m": 0.001,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -10.426,
+          "y_body_m": 5.02,
+          "range_m": 11.572,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.002,
+          "note": "not emitted \u2014 closing speed -0.002 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_021_31b871a455d1",
+        "instance_token": "60e1ec6251134f9a8e2031b871a455d1",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 10.421,
+          "d_curr_m": 10.416,
+          "delta_d_m": -0.004,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -8.971,
+          "y_body_m": 5.294,
+          "range_m": 10.416,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.009,
+          "note": "not emitted \u2014 closing speed 0.009 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      }
+    ],
+    "22": [
+      {
+        "sp_id": "SP_scene_1100_022_541a7a65ec00",
+        "instance_token": "0b2ba0a3a3874e4a9863541a7a65ec00",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 8.399,
+          "d_curr_m": 8.392,
+          "delta_d_m": -0.007,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -7.236,
+          "y_body_m": 4.249,
+          "range_m": 8.392,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.014,
+          "note": "not emitted \u2014 closing speed 0.014 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_a804db6fe9c2",
+        "instance_token": "e548e74bf98d49769949a804db6fe9c2",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Approaching",
+          "d_prev_m": 28.267,
+          "d_curr_m": 27.654,
+          "delta_d_m": -0.612,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "Following",
+          "x_body_m": -27.645,
+          "y_body_m": 0.725,
+          "range_m": 27.654,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Low",
+          "d_prev_m": 28.267,
+          "d_curr_m": 27.654,
+          "closing_speed_m_per_s": 1.225,
+          "ttc_s": 22.582,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_378fb858beb4",
+        "instance_token": "246622de508246f8b2da378fb858beb4",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 23.736,
+          "d_curr_m": 28.186,
+          "delta_d_m": 4.45,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightFollowing",
+          "x_body_m": -23.074,
+          "y_body_m": -16.188,
+          "range_m": 28.186,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -8.9,
+          "note": "not emitted \u2014 closing speed -8.9 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_01f47ef1cbd0",
+        "instance_token": "20200e733c334714b91a01f47ef1cbd0",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 22.444,
+          "d_curr_m": 22.558,
+          "delta_d_m": 0.113,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -20.295,
+          "y_body_m": 9.846,
+          "range_m": 22.558,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.227,
+          "note": "not emitted \u2014 closing speed -0.227 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_651025150bdc",
+        "instance_token": "1e5f2a84bbe645c29e83651025150bdc",
+        "type_label": "vehicle.motorcycle",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 25.962,
+          "d_curr_m": 27.892,
+          "delta_d_m": 1.93,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 18.631,
+          "y_body_m": -20.757,
+          "range_m": 27.892,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -3.86,
+          "note": "not emitted \u2014 closing speed -3.86 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_044379697197",
+        "instance_token": "21cdc9f24c614a6197fd044379697197",
+        "type_label": "vehicle.motorcycle",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Approaching",
+          "d_prev_m": 50.449,
+          "d_curr_m": 45.872,
+          "delta_d_m": -4.577,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftPreceding",
+          "x_body_m": 42.802,
+          "y_body_m": 16.5,
+          "range_m": 45.872,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Medium",
+          "d_prev_m": 50.449,
+          "d_curr_m": 45.872,
+          "closing_speed_m_per_s": 9.154,
+          "ttc_s": 5.011,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_f4c11233de34",
+        "instance_token": "47b04d517ed64f92ad6af4c11233de34",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 17.826,
+          "d_curr_m": 17.813,
+          "delta_d_m": -0.012,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightAlongside",
+          "x_body_m": 1.759,
+          "y_body_m": -17.726,
+          "range_m": 17.813,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.024,
+          "note": "not emitted \u2014 closing speed 0.024 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_68a8bf946d3e",
+        "instance_token": "baa84e9048974b67a0c168a8bf946d3e",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 10.441,
+          "d_curr_m": 10.409,
+          "delta_d_m": -0.032,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -9.739,
+          "y_body_m": 3.672,
+          "range_m": 10.409,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.064,
+          "note": "not emitted \u2014 closing speed 0.064 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_1c53781f92e0",
+        "instance_token": "90a1246128ad470c85bd1c53781f92e0",
+        "type_label": "vehicle.bus.rigid",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 84.361,
+          "d_curr_m": 86.128,
+          "delta_d_m": 1.767,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": null,
+          "x_body_m": 73.602,
+          "y_body_m": 44.729,
+          "range_m": 86.128,
+          "excluded_range": true,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -3.534,
+          "note": "not emitted \u2014 closing speed -3.534 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_45e15aab5ac8",
+        "instance_token": "759185c2435a4fb393a145e15aab5ac8",
+        "type_label": "vehicle.bus.rigid",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 26.727,
+          "d_curr_m": 26.728,
+          "delta_d_m": 0.001,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 11.104,
+          "y_body_m": -24.312,
+          "range_m": 26.728,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.002,
+          "note": "not emitted \u2014 closing speed -0.002 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_a6a655978ada",
+        "instance_token": "7a88efefda9f4fc3a30fa6a655978ada",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 20.522,
+          "d_curr_m": 20.603,
+          "delta_d_m": 0.081,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 20.193,
+          "y_body_m": -4.091,
+          "range_m": 20.603,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.162,
+          "note": "not emitted \u2014 closing speed -0.162 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_420c7fb99649",
+        "instance_token": "7c7ea45167174debb191420c7fb99649",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 8.781,
+          "d_curr_m": 8.573,
+          "delta_d_m": -0.208,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightFollowing",
+          "x_body_m": -7.523,
+          "y_body_m": -4.111,
+          "range_m": 8.573,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Low",
+          "d_prev_m": 8.781,
+          "d_curr_m": 8.573,
+          "closing_speed_m_per_s": 0.416,
+          "ttc_s": 20.595,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_d9987d64d355",
+        "instance_token": "14201e2f4fcf44b58240d9987d64d355",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 31.035,
+          "d_curr_m": 30.987,
+          "delta_d_m": -0.048,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 9.646,
+          "y_body_m": -29.447,
+          "range_m": 30.987,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.096,
+          "note": "not emitted \u2014 closing speed 0.096 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_a90302944c19",
+        "instance_token": "0ba56cee062b419a80a6a90302944c19",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 15.607,
+          "d_curr_m": 15.562,
+          "delta_d_m": -0.046,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 13.91,
+          "y_body_m": -6.977,
+          "range_m": 15.562,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.092,
+          "note": "not emitted \u2014 closing speed 0.092 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_9a73e105c3c4",
+        "instance_token": "bb0f40c613904cdcb3299a73e105c3c4",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 57.435,
+          "d_curr_m": 61.426,
+          "delta_d_m": 3.991,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": null,
+          "x_body_m": -54.585,
+          "y_body_m": -28.171,
+          "range_m": 61.426,
+          "excluded_range": true,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -7.981,
+          "note": "not emitted \u2014 closing speed -7.981 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_f57669d7a8b4",
+        "instance_token": "7028b22052c3450da6eef57669d7a8b4",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 5.998,
+          "d_curr_m": 5.995,
+          "delta_d_m": -0.003,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "Following",
+          "x_body_m": -5.74,
+          "y_body_m": -1.73,
+          "range_m": 5.995,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": 0.006,
+          "note": "not emitted \u2014 closing speed 0.006 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_6a768808246d",
+        "instance_token": "ca291f5d8bf7447ca85d6a768808246d",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 23.25,
+          "d_curr_m": 23.149,
+          "delta_d_m": -0.101,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "RightPreceding",
+          "x_body_m": 6.948,
+          "y_body_m": -22.081,
+          "range_m": 23.149,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Low",
+          "d_prev_m": 23.25,
+          "d_curr_m": 23.149,
+          "closing_speed_m_per_s": 0.202,
+          "ttc_s": 114.746,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_884b54b757ac",
+        "instance_token": "e15f0fb13c744ef1a716884b54b757ac",
+        "type_label": "vehicle.motorcycle",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Approaching",
+          "d_prev_m": 24.816,
+          "d_curr_m": 23.025,
+          "delta_d_m": -1.791,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftPreceding",
+          "x_body_m": 14.48,
+          "y_body_m": 17.902,
+          "range_m": 23.025,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": "Medium",
+          "d_prev_m": 24.816,
+          "d_curr_m": 23.025,
+          "closing_speed_m_per_s": 3.582,
+          "ttc_s": 6.428,
+          "delta_t_s": 0.5,
+          "thresholds": {
+            "high_upper_s": 4.0,
+            "medium_upper_s": 10.0
+          },
+          "rule": "High if ttc < 4 s; Medium if 4 \u2264 ttc < 10 s; Low if ttc \u2265 10 s"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_463324be8536",
+        "instance_token": "0debc457dad44487be97463324be8536",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 58.754,
+          "d_curr_m": 59.861,
+          "delta_d_m": 1.108,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": null,
+          "x_body_m": 31.761,
+          "y_body_m": -50.74,
+          "range_m": 59.861,
+          "excluded_range": true,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -2.216,
+          "note": "not emitted \u2014 closing speed -2.216 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_402c70770e3b",
+        "instance_token": "7b644b3fb6634f13bf30402c70770e3b",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 8.984,
+          "d_curr_m": 8.997,
+          "delta_d_m": 0.013,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -8.014,
+          "y_body_m": 4.088,
+          "range_m": 8.997,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.026,
+          "note": "not emitted \u2014 closing speed -0.026 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_98c29acb8087",
+        "instance_token": "c7925b44db7f4cfdb37e98c29acb8087",
+        "type_label": "vehicle.car",
+        "coarse_category": "Vehicle",
+        "motion": {
+          "label": "Receding",
+          "d_prev_m": 60.202,
+          "d_curr_m": 61.251,
+          "delta_d_m": 1.049,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": null,
+          "x_body_m": 51.526,
+          "y_body_m": 33.117,
+          "range_m": 61.251,
+          "excluded_range": true,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -2.098,
+          "note": "not emitted \u2014 closing speed -2.098 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_24e0072aa659",
+        "instance_token": "1c6ea643f2d04632ac5624e0072aa659",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 11.572,
+          "d_curr_m": 11.572,
+          "delta_d_m": 0.0,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -10.483,
+          "y_body_m": 4.901,
+          "range_m": 11.572,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.0,
+          "note": "not emitted \u2014 closing speed -0.0 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      },
+      {
+        "sp_id": "SP_scene_1100_022_31b871a455d1",
+        "instance_token": "60e1ec6251134f9a8e2031b871a455d1",
+        "type_label": "human.pedestrian.adult",
+        "coarse_category": "Pedestrian",
+        "motion": {
+          "label": "Stationary",
+          "d_prev_m": 10.416,
+          "d_curr_m": 10.566,
+          "delta_d_m": 0.149,
+          "threshold_m": 0.5,
+          "rule": "Approaching if delta_d < -threshold; Receding if delta_d > +threshold; else Stationary"
+        },
+        "spatial": {
+          "label": "LeftFollowing",
+          "x_body_m": -9.103,
+          "y_body_m": 5.364,
+          "range_m": 10.566,
+          "excluded_range": false,
+          "thresholds": {
+            "max_range_m": 50.0,
+            "long_band_m": 3.0,
+            "lat_band_m": 1.75
+          },
+          "rule": "y_body >= +1.75 \u2192 Left; y_body <= -1.75 \u2192 Right; else Same-lane. x_body > +3.0 \u2192 Preceding; x_body < -3.0 \u2192 Following; else Alongside. Same-lane + Alongside \u2192 no label."
+        },
+        "ttc": {
+          "label": null,
+          "closing_speed_m_per_s": -0.298,
+          "note": "not emitted \u2014 closing speed -0.298 m/s < threshold 0.1 m/s (agent receding or nearly stationary)"
+        }
+      }
+    ]
+  }
+}
