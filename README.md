@@ -133,7 +133,3 @@ are therefore subject to the [nuScenes terms of use](https://www.nuscenes.org/te
 yourself and agree to its license; the dataset is **not** redistributed here.
 
 If you use this work, please cite the accompanying paper (see `CITATION.cff`).
-
-## Relation to the thesis repository
-
-The upstream experiment lives at `Masters/experiments/exp006-intention-relations`. This tree is a **public-facing snapshot** focused on build instructions and artifacts; it omits long internal design documentation.
